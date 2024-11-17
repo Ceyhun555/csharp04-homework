@@ -14,7 +14,9 @@ namespace Quiz.Game
 
             //Task1:
             /*Question 1: Basic Output in C#
-            Description: Learn how to display text on the console.
+             * answer.
+            Description: Learn how to display text on the console. 
+
 
             Question: What is the correct syntax to output "Hello, World!" in C#?
 
