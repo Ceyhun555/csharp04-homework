@@ -1,0 +1,15 @@
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week8\Swiitch.Case\bin\Debug\net6.0\Swiitch.Case.exe
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week8\Swiitch.Case\bin\Debug\net6.0\Swiitch.Case.deps.json
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week8\Swiitch.Case\bin\Debug\net6.0\Swiitch.Case.runtimeconfig.json
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week8\Swiitch.Case\bin\Debug\net6.0\Swiitch.Case.dll
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week8\Swiitch.Case\bin\Debug\net6.0\Swiitch.Case.pdb
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week8\Swiitch.Case\obj\Debug\net6.0\Swiitch.Case.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week8\Swiitch.Case\obj\Debug\net6.0\Swiitch.Case.AssemblyInfoInputs.cache
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week8\Swiitch.Case\obj\Debug\net6.0\Swiitch.Case.AssemblyInfo.cs
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week8\Swiitch.Case\obj\Debug\net6.0\Swiitch.Case.csproj.CoreCompileInputs.cache
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week8\Swiitch.Case\obj\Debug\net6.0\Swiitch.Case.sourcelink.json
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week8\Swiitch.Case\obj\Debug\net6.0\Swiitch.Case.dll
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week8\Swiitch.Case\obj\Debug\net6.0\refint\Swiitch.Case.dll
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week8\Swiitch.Case\obj\Debug\net6.0\Swiitch.Case.pdb
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week8\Swiitch.Case\obj\Debug\net6.0\Swiitch.Case.genruntimeconfig.cache
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week8\Swiitch.Case\obj\Debug\net6.0\ref\Swiitch.Case.dll

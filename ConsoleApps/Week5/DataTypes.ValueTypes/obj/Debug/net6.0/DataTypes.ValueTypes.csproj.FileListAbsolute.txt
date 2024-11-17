@@ -1,0 +1,15 @@
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\DataTypes.ValueTypes\bin\Debug\net6.0\DataTypes.ValueTypes.exe
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\DataTypes.ValueTypes\bin\Debug\net6.0\DataTypes.ValueTypes.deps.json
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\DataTypes.ValueTypes\bin\Debug\net6.0\DataTypes.ValueTypes.runtimeconfig.json
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\DataTypes.ValueTypes\bin\Debug\net6.0\DataTypes.ValueTypes.dll
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\DataTypes.ValueTypes\bin\Debug\net6.0\DataTypes.ValueTypes.pdb
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\DataTypes.ValueTypes\obj\Debug\net6.0\DataTypes.ValueTypes.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\DataTypes.ValueTypes\obj\Debug\net6.0\DataTypes.ValueTypes.AssemblyInfoInputs.cache
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\DataTypes.ValueTypes\obj\Debug\net6.0\DataTypes.ValueTypes.AssemblyInfo.cs
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\DataTypes.ValueTypes\obj\Debug\net6.0\DataTypes.ValueTypes.csproj.CoreCompileInputs.cache
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\DataTypes.ValueTypes\obj\Debug\net6.0\DataTypes.ValueTypes.sourcelink.json
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\DataTypes.ValueTypes\obj\Debug\net6.0\DataTypes.ValueTypes.dll
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\DataTypes.ValueTypes\obj\Debug\net6.0\refint\DataTypes.ValueTypes.dll
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\DataTypes.ValueTypes\obj\Debug\net6.0\DataTypes.ValueTypes.pdb
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\DataTypes.ValueTypes\obj\Debug\net6.0\DataTypes.ValueTypes.genruntimeconfig.cache
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\DataTypes.ValueTypes\obj\Debug\net6.0\ref\DataTypes.ValueTypes.dll

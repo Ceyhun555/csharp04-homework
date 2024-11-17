@@ -1,0 +1,15 @@
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\Week5.Homeworks\bin\Debug\net6.0\Week5.Homeworks.exe
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\Week5.Homeworks\bin\Debug\net6.0\Week5.Homeworks.deps.json
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\Week5.Homeworks\bin\Debug\net6.0\Week5.Homeworks.runtimeconfig.json
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\Week5.Homeworks\bin\Debug\net6.0\Week5.Homeworks.dll
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\Week5.Homeworks\bin\Debug\net6.0\Week5.Homeworks.pdb
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\Week5.Homeworks\obj\Debug\net6.0\Week5.Homeworks.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\Week5.Homeworks\obj\Debug\net6.0\Week5.Homeworks.AssemblyInfoInputs.cache
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\Week5.Homeworks\obj\Debug\net6.0\Week5.Homeworks.AssemblyInfo.cs
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\Week5.Homeworks\obj\Debug\net6.0\Week5.Homeworks.csproj.CoreCompileInputs.cache
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\Week5.Homeworks\obj\Debug\net6.0\Week5.Homeworks.sourcelink.json
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\Week5.Homeworks\obj\Debug\net6.0\Week5.Homeworks.dll
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\Week5.Homeworks\obj\Debug\net6.0\refint\Week5.Homeworks.dll
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\Week5.Homeworks\obj\Debug\net6.0\Week5.Homeworks.pdb
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\Week5.Homeworks\obj\Debug\net6.0\Week5.Homeworks.genruntimeconfig.cache
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week5\Week5.Homeworks\obj\Debug\net6.0\ref\Week5.Homeworks.dll

@@ -1,0 +1,15 @@
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week6\DataTypes.Castings\bin\Debug\net6.0\DataTypes.Castings.exe
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week6\DataTypes.Castings\bin\Debug\net6.0\DataTypes.Castings.deps.json
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week6\DataTypes.Castings\bin\Debug\net6.0\DataTypes.Castings.runtimeconfig.json
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week6\DataTypes.Castings\bin\Debug\net6.0\DataTypes.Castings.dll
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week6\DataTypes.Castings\bin\Debug\net6.0\DataTypes.Castings.pdb
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week6\DataTypes.Castings\obj\Debug\net6.0\DataTypes.Castings.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week6\DataTypes.Castings\obj\Debug\net6.0\DataTypes.Castings.AssemblyInfoInputs.cache
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week6\DataTypes.Castings\obj\Debug\net6.0\DataTypes.Castings.AssemblyInfo.cs
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week6\DataTypes.Castings\obj\Debug\net6.0\DataTypes.Castings.csproj.CoreCompileInputs.cache
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week6\DataTypes.Castings\obj\Debug\net6.0\DataTypes.Castings.sourcelink.json
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week6\DataTypes.Castings\obj\Debug\net6.0\DataTypes.Castings.dll
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week6\DataTypes.Castings\obj\Debug\net6.0\refint\DataTypes.Castings.dll
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week6\DataTypes.Castings\obj\Debug\net6.0\DataTypes.Castings.pdb
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week6\DataTypes.Castings\obj\Debug\net6.0\DataTypes.Castings.genruntimeconfig.cache
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week6\DataTypes.Castings\obj\Debug\net6.0\ref\DataTypes.Castings.dll

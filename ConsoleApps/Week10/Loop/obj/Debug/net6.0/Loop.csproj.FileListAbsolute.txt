@@ -1,0 +1,15 @@
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week10\Loop\bin\Debug\net6.0\Loop.exe
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week10\Loop\bin\Debug\net6.0\Loop.deps.json
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week10\Loop\bin\Debug\net6.0\Loop.runtimeconfig.json
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week10\Loop\bin\Debug\net6.0\Loop.dll
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week10\Loop\bin\Debug\net6.0\Loop.pdb
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week10\Loop\obj\Debug\net6.0\Loop.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week10\Loop\obj\Debug\net6.0\Loop.AssemblyInfoInputs.cache
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week10\Loop\obj\Debug\net6.0\Loop.AssemblyInfo.cs
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week10\Loop\obj\Debug\net6.0\Loop.csproj.CoreCompileInputs.cache
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week10\Loop\obj\Debug\net6.0\Loop.sourcelink.json
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week10\Loop\obj\Debug\net6.0\Loop.dll
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week10\Loop\obj\Debug\net6.0\refint\Loop.dll
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week10\Loop\obj\Debug\net6.0\Loop.pdb
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week10\Loop\obj\Debug\net6.0\Loop.genruntimeconfig.cache
+C:\git\CSharp04\csharp04-homework\ConsoleApps\Week10\Loop\obj\Debug\net6.0\ref\Loop.dll
