@@ -14,16 +14,8 @@ namespace Quiz.Game
 
             //Task1:
             /*Question 1: Basic Output in C#
-             * Qusestion.
             Description: Learn how to display text on the console.
-             * answer. 
-             * 
-             * wip2
-            Description: Learn how to display text on the console. 
-
-
-
-
+    
             Question: What is the correct syntax to output "Hello, World!" in C#?
 
             a)print("Hello, World!");
@@ -37,31 +29,41 @@ namespace Quiz.Game
 
             char correctAnswer = 'b';
 
+            Console.WriteLine("Question 1: What is the correct syntax to output \"Hello, World!\" in C#?");
+
+            Console.WriteLine("a)print(\"Hello, World!\")");
+            Console.WriteLine("b)Console.WriteLine(\"Hello, World!\")");
+            Console.WriteLine("c)echo \"Hello, World!\":");
+            Console.WriteLine("d)printf(\"Hello, World!\")");
+            Console.WriteLine();
+
             while (true)
             {
 
-                Console.WriteLine("Question 1: What is the correct syntax to output \"Hello, World!\" in C#?");
 
-                Console.WriteLine("a)print(\"Hello, World!\")");
-                Console.WriteLine("b)Console.WriteLine(\"Hello, World!\")");
-                Console.WriteLine("c)echo \"Hello, World!\":");
-                Console.WriteLine("d)printf(\"Hello, World!\")");
-                Console.WriteLine();
                 Console.Write("Enter your answer: ");
-                char userAnswer;
-                bool isCorrectAnswerParsing = char.TryParse(Console.ReadLine(), out userAnswer);
+                string userInput = Console.ReadLine();
+                bool isCorrectAnswerParsing = char.TryParse(userInput, out char userAnswer);
 
-                if (userAnswer == correctAnswer)
+                if (isCorrectAnswerParsing == true && (userAnswer == 'a' || userAnswer == 'b' || userAnswer == 'c' || userAnswer == 'd'))
                 {
-                    Console.WriteLine("Correct!");
-                    score++;
-                        
+
+                    if (userAnswer == correctAnswer)
+                    {
+                        Console.WriteLine("Correct!");
+                        score++;
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incorrect!");
+                    }
+                    break;
                 }
                 else
                 {
-                    Console.WriteLine("Incorrect!");
+                    Console.WriteLine("Invalid input. Please enter a or b or c or d option!");
                 }
-                break;
             }
             Console.WriteLine();
 
@@ -78,29 +80,37 @@ namespace Quiz.Game
 
             char correctAnswer1 = 'c';
 
+            Console.WriteLine("Question 2: Data Types - String");
+            Console.WriteLine("a)text");
+            Console.WriteLine("b)char");
+            Console.WriteLine("c)string");
+            Console.WriteLine("d)txt");
+            Console.WriteLine();
+
             while (true)
             {
-                Console.WriteLine("Question 2: Data Types - String");
-                Console.WriteLine("a)text");
-                Console.WriteLine("b)char");
-                Console.WriteLine("c)string");
-                Console.WriteLine("d)txt");
-                Console.WriteLine();
+
                 Console.Write("Enter your answer: ");
-                char userAnswer1;
-                bool isCorrectAnswer1Parsing = char.TryParse(Console.ReadLine(), out userAnswer1);
+                string userInput1 = Console.ReadLine();
+                bool isCorrectAnswer1Parsing = char.TryParse(userInput1, out char userAnswer1);
 
-
-                if (userAnswer1 == correctAnswer1)
+                if (isCorrectAnswer1Parsing == true && (userAnswer1 == 'a' || userAnswer1 == 'b' || userAnswer1 == 'c' || userAnswer1 == 'd'))
                 {
-                    Console.WriteLine("Correct!");
-                    score++;
+                    if (userAnswer1 == correctAnswer1)
+                    {
+                        Console.WriteLine("Correct!");
+                        score++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incorrect!");
+                    }
+                    break;
                 }
                 else
                 {
-                    Console.WriteLine("Incorrect!");
+                    Console.WriteLine("Invalid input. Please enter a or b or c or d option!");
                 }
-                break;
             }
             Console.WriteLine();
 
@@ -117,29 +127,37 @@ namespace Quiz.Game
 
             char correctAnswer2 = 'b';
 
+            Console.WriteLine("Question 3: Which operator is used to add two numbers in C#?");
+            Console.WriteLine("a)*");
+            Console.WriteLine("b)+");
+            Console.WriteLine("c)&");
+            Console.WriteLine("d)%");
+            Console.WriteLine();
+
             while (true)
             {
-                Console.WriteLine("Question 3: Which operator is used to add two numbers in C#?");
-                Console.WriteLine("a)*");
-                Console.WriteLine("b)+");
-                Console.WriteLine("c)&");
-                Console.WriteLine("d)%");
-                Console.WriteLine();
+
                 Console.Write("Enter your answer: ");
-                char userAnswer2;
-                bool isCorrectAnswer2Parsing = char.TryParse(Console.ReadLine(), out userAnswer2);
+                string userInput2 = Console.ReadLine();
+                bool isCorrectAnswer2Parsing = char.TryParse(userInput2, out char userAnswer2);
 
-
-                if (userAnswer2 == correctAnswer2)
+                if (isCorrectAnswer2Parsing == true && (userAnswer2 == 'a' || userAnswer2 == 'b' || userAnswer2 == 'c' || userAnswer2 == 'd'))
                 {
-                    Console.WriteLine("Correct!");
-                    score++;
+                    if (userAnswer2 == correctAnswer2)
+                    {
+                        Console.WriteLine("Correct!");
+                        score++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incorrect!");
+                    }
+                    break;
                 }
                 else
                 {
-                    Console.WriteLine("Incorrect!");
+                    Console.WriteLine("Invalid input. Please enter a or b or c or d option!");
                 }
-                break;
             }
             Console.WriteLine();
 
@@ -156,29 +174,38 @@ namespace Quiz.Game
 
             char correctAnswer3 = 'a';
 
+            Console.WriteLine("Question 4: How do you create an integer variable named \"x\" with the value 5?");
+            Console.WriteLine("a) int x = 5;");
+            Console.WriteLine("b) x int = 5;");
+            Console.WriteLine("c) int x = \"5\";");
+            Console.WriteLine("d) 5 = int x;");
+            Console.WriteLine();
+
             while (true)
             {
-                Console.WriteLine("Question 4: How do you create an integer variable named \"x\" with the value 5?");
-                Console.WriteLine("a) int x = 5;");
-                Console.WriteLine("b) x int = 5;");
-                Console.WriteLine("c) int x = \"5\";");
-                Console.WriteLine("d) 5 = int x;");
-                Console.WriteLine();
+
                 Console.Write("Enter your answer: ");
-                char userAnswer3;
-                bool isCorrectAnswer3Parsing = char.TryParse(Console.ReadLine(), out userAnswer3);
+                string userInput3 = Console.ReadLine();
+                bool isCorrectAnswer3Parsing = char.TryParse(userInput3, out char userAnswer3);
 
-
-                if (userAnswer3 == correctAnswer3)
+                if (isCorrectAnswer3Parsing == true && (userAnswer3 == 'a' || userAnswer3 == 'b' || userAnswer3 == 'c' || userAnswer3 == 'd'))
                 {
-                    Console.WriteLine("Correct!");
-                    score++;
+
+                    if (userAnswer3 == correctAnswer3)
+                    {
+                        Console.WriteLine("Correct!");
+                        score++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incorrect!");
+                    }
+                    break;
                 }
                 else
                 {
-                    Console.WriteLine("Incorrect!");
+                    Console.WriteLine("Invalid input. Please enter a or b or c or d option!");
                 }
-                break;
             }
             Console.WriteLine();
 
@@ -195,29 +222,37 @@ namespace Quiz.Game
 
             char correctAnswer4 = 'a';
 
+            Console.WriteLine("Question 5: Which keyword is commonly used to create a basic conditional statement in C#?");
+            Console.WriteLine("a) if");
+            Console.WriteLine("b) case");
+            Console.WriteLine("c) switch");
+            Console.WriteLine("d) goto");
+            Console.WriteLine();
+
             while (true)
             {
-                Console.WriteLine("Question 5: Which keyword is commonly used to create a basic conditional statement in C#?");
-                Console.WriteLine("a) if");
-                Console.WriteLine("b) case");
-                Console.WriteLine("c) switch");
-                Console.WriteLine("d) goto");
-                Console.WriteLine();
+
                 Console.Write("Enter your answer: ");
-                char userAnswer4;
-                bool isCorrectAnswer4Parsing = char.TryParse(Console.ReadLine(), out userAnswer4);
+                string userInput4 = Console.ReadLine();
+                bool isCorrectAnswer4Parsing = char.TryParse(userInput4, out char userAnswer4);
 
-
-                if (userAnswer4 == correctAnswer4)
+                if (isCorrectAnswer4Parsing == true && (userAnswer4 == 'a' || userAnswer4 == 'b' || userAnswer4 == 'c' || userAnswer4 == 'd'))
                 {
-                    Console.WriteLine("Correct!");
-                    score++;
+                    if (userAnswer4 == correctAnswer4)
+                    {
+                        Console.WriteLine("Correct!");
+                        score++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incorrect!");
+                    }
+                    break;
                 }
                 else
                 {
-                    Console.WriteLine("Incorrect!");
+                    Console.WriteLine("Invalid input. Please enter a or b or c or d option!");
                 }
-                break;
             }
             Console.WriteLine();
 
@@ -234,29 +269,37 @@ namespace Quiz.Game
 
             char correctAnswer5 = 'b';
 
+            Console.WriteLine("Question 6: How do you start a while loop in C#?");
+            Console.WriteLine("a)while x > y {}");
+            Console.WriteLine("b)while (x > y) {}");
+            Console.WriteLine("c)while x > y: {}");
+            Console.WriteLine("d)while (x > y):");
+            Console.WriteLine();
+
             while (true)
             {
-                Console.WriteLine("Question 6: How do you start a while loop in C#?");
-                Console.WriteLine("a)while x > y {}");
-                Console.WriteLine("b)while (x > y) {}");
-                Console.WriteLine("c)while x > y: {}");
-                Console.WriteLine("d)while (x > y):");
-                Console.WriteLine();
+
                 Console.Write("Enter your answer: ");
-                char userAnswer5;
-                bool isCorrectAnswer5Parsing = char.TryParse(Console.ReadLine(), out userAnswer5);
+                string userInput5 = Console.ReadLine();
+                bool isCorrectAnswer5Parsing = char.TryParse(userInput5, out char userAnswer5);
 
-
-                if (userAnswer5 == correctAnswer5)
+                if (isCorrectAnswer5Parsing == true && (userAnswer5 == 'a' || userAnswer5 == 'b' || userAnswer5 == 'c' || userAnswer5 == 'd'))
                 {
-                    Console.WriteLine("Correct!");
-                    score++;
+                    if (userAnswer5 == correctAnswer5)
+                    {
+                        Console.WriteLine("Correct!");
+                        score++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incorrect!");
+                    }
+                    break;
                 }
                 else
                 {
-                    Console.WriteLine("Incorrect!");
+                    Console.WriteLine("Invalid input. Please enter a or b or c or d option!");
                 }
-                break;
             }
             Console.WriteLine();
 
@@ -273,29 +316,37 @@ namespace Quiz.Game
 
             char correctAnswer6 = 'c';
 
+            Console.WriteLine("Question 7: Which keyword is used to exit a loop in C#?");
+            Console.WriteLine("a)stop");
+            Console.WriteLine("b)end");
+            Console.WriteLine("c)break");
+            Console.WriteLine("d)exit");
+            Console.WriteLine();
+
             while (true)
             {
-                Console.WriteLine("Question 7: Which keyword is used to exit a loop in C#?");
-                Console.WriteLine("a)stop");
-                Console.WriteLine("b)end");
-                Console.WriteLine("c)break");
-                Console.WriteLine("d)exit");
-                Console.WriteLine();
+
                 Console.Write("Enter your answer: ");
-                char userAnswer6;
-                bool isCorrectAnswer6Parsing = char.TryParse(Console.ReadLine(), out userAnswer6);
+                string userInput6 = Console.ReadLine();
+                bool isCorrectAnswer6Parsing = char.TryParse(userInput6, out char userAnswer6);
 
-
-                if (userAnswer6 == correctAnswer6)
+                if (isCorrectAnswer6Parsing == true && (userAnswer6 == 'a' || userAnswer6 == 'b' || userAnswer6 == 'c' || userAnswer6 == 'd'))
                 {
-                    Console.WriteLine("Correct!");
-                    score++;
+                    if (userAnswer6 == correctAnswer6)
+                    {
+                        Console.WriteLine("Correct!");
+                        score++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incorrect!");
+                    }
+                    break;
                 }
                 else
                 {
-                    Console.WriteLine("Incorrect!");
+                    Console.WriteLine("Invalid input. Please enter a or b or c or d option!");
                 }
-                break;
             }
             Console.WriteLine();
 
@@ -312,29 +363,37 @@ namespace Quiz.Game
 
             char correctAnswer7 = 'b';
 
+            Console.WriteLine("Question 8: Which operator is used to compare two values in C#?");
+            Console.WriteLine("a)<>");
+            Console.WriteLine("b)>");
+            Console.WriteLine("c)<<");
+            Console.WriteLine("d)||");
+            Console.WriteLine();
+
             while (true)
             {
-                Console.WriteLine("Question 8: Which operator is used to compare two values in C#?");
-                Console.WriteLine("a)<>");
-                Console.WriteLine("b)>");
-                Console.WriteLine("c)<<");
-                Console.WriteLine("d)||");
-                Console.WriteLine();
+
                 Console.Write("Enter your answer: ");
-                char userAnswer7;
-                bool isCorrectAnswer7Parsing = char.TryParse(Console.ReadLine(), out userAnswer7);
+                string userInput7 = Console.ReadLine();
+                bool isCorrectAnswer7Parsing = char.TryParse(userInput7, out char userAnswer7);
 
-
-                if (userAnswer7 == correctAnswer7)
+                if (isCorrectAnswer7Parsing == true && (userAnswer7 == 'a' || userAnswer7 == 'b' || userAnswer7 == 'c' || userAnswer7 == 'd'))
                 {
-                    Console.WriteLine("Correct!");
-                    score++;
+                    if (userAnswer7 == correctAnswer7)
+                    {
+                        Console.WriteLine("Correct!");
+                        score++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incorrect!");
+                    }
+                    break;
                 }
                 else
                 {
-                    Console.WriteLine("Incorrect!");
+                    Console.WriteLine("Invalid input. Please enter a or b or c or d option!");
                 }
-                break;
             }
             Console.WriteLine();
 
@@ -351,29 +410,37 @@ namespace Quiz.Game
 
             char correctAnswer8 = 'c';
 
+            Console.WriteLine("Question 9: Which operator can be used to combine two conditions in C#?");
+            Console.WriteLine("a)&");
+            Console.WriteLine("b)|");
+            Console.WriteLine("c)&&");
+            Console.WriteLine("d)$$");
+            Console.WriteLine();
+
             while (true)
             {
-                Console.WriteLine("Question 9: Which operator can be used to combine two conditions in C#?");
-                Console.WriteLine("a)&");
-                Console.WriteLine("b)|");
-                Console.WriteLine("c)&&");
-                Console.WriteLine("d)$$");
-                Console.WriteLine();
+
                 Console.Write("Your answer is: ");
-                char userAnswer8;
-                bool isCorrectAnswer8Parsing = char.TryParse(Console.ReadLine(), out userAnswer8);
+                string userInput8 = Console.ReadLine();
+                bool isCorrectAnswer8Parsing = char.TryParse(userInput8, out char userAnswer8);
 
-
-                if (userAnswer8 == correctAnswer8)
+                if (isCorrectAnswer8Parsing == true && (userAnswer8 == 'a' || userAnswer8 == 'b' || userAnswer8 == 'c' || userAnswer8 == 'd'))
                 {
-                    Console.WriteLine("Correct!");
-                    score++;
+                    if (userAnswer8 == correctAnswer8)
+                    {
+                        Console.WriteLine("Correct!");
+                        score++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incorrect!");
+                    }
+                    break;
                 }
                 else
                 {
-                    Console.WriteLine("Incorrect!");
+                    Console.WriteLine("Invalid input. Please enter a or b or c or d option!");
                 }
-                break;
             }
             Console.WriteLine();
 
@@ -390,29 +457,37 @@ namespace Quiz.Game
 
             char correctAnswer9 = 'a';
 
+            Console.WriteLine("Question 10: How do you start a for loop in C#?");
+            Console.WriteLine("a)for (int i = 0; i < 5; i++) {}");
+            Console.WriteLine("b)for int i = 0 to 5 {}");
+            Console.WriteLine("c)foreach (i in range(5)) {}");
+            Console.WriteLine("d)for each i = 0; i < 5");
+            Console.WriteLine();
+
             while (true)
             {
-                Console.WriteLine("Question 10: How do you start a for loop in C#?");
-                Console.WriteLine("a)for (int i = 0; i < 5; i++) {}");
-                Console.WriteLine("b)for int i = 0 to 5 {}");
-                Console.WriteLine("c)foreach (i in range(5)) {}");
-                Console.WriteLine("d)for each i = 0; i < 5");
-                Console.WriteLine();
+
                 Console.Write("Enter your answer: ");
-                char userAnswer9;
-                bool isCorrectAnswer9Parsing = char.TryParse(Console.ReadLine(), out userAnswer9);
+                string userInput9 = Console.ReadLine();
+                bool isCorrectAnswer9Parsing = char.TryParse(userInput9, out char userAnswer9);
 
-
-                if (userAnswer9 == correctAnswer9)
+                if (isCorrectAnswer9Parsing == true && (userAnswer9 == 'a' || userAnswer9 == 'b' || userAnswer9 == 'c' || userAnswer9 == 'd'))
                 {
-                    Console.WriteLine("Correct!");
-                    score++;
+                    if (userAnswer9 == correctAnswer9)
+                    {
+                        Console.WriteLine("Correct!");
+                        score++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incorrect!");
+                    }
+                    break;
                 }
                 else
                 {
-                    Console.WriteLine("Incorrect!");
+                    Console.WriteLine("Invalid input. Please enter a or b or c or d option!");
                 }
-                break;
             }
             Console.WriteLine();
 
@@ -429,29 +504,38 @@ namespace Quiz.Game
 
             char correctAnswer10 = 'a';
 
+            Console.WriteLine("Question 11: What is the correct syntax for a multi-line comment in C#?");
+            Console.WriteLine("a)/* comment */");
+            Console.WriteLine("b)// comment");
+            Console.WriteLine("c) # comment");
+            Console.WriteLine("d) **comment **");
+            Console.WriteLine();
+
             while (true)
             {
-                Console.WriteLine("Question 11: What is the correct syntax for a multi-line comment in C#?");
-                Console.WriteLine("a)/* comment */");
-                Console.WriteLine("b)// comment");
-                Console.WriteLine("c) # comment");
-                Console.WriteLine("d) **comment **");
-                Console.WriteLine();
+
                 Console.Write("Your answer is: ");
-                char userAnswer10;
-                bool isCorrectAnswer10Parsing = char.TryParse(Console.ReadLine(), out userAnswer10);
+                string userInput10 = Console.ReadLine();
+                bool isCorrectAnswer10Parsing = char.TryParse(userInput10, out char userAnswer10);
 
-
-                if (userAnswer10 == correctAnswer10)
+                if (isCorrectAnswer10Parsing == true && (userAnswer10 == 'a' || userAnswer10 == 'b' || userAnswer10 == 'c' || userAnswer10 == 'd'))
                 {
-                    Console.WriteLine("Correct!");
-                    score++;
+
+                    if (userAnswer10 == correctAnswer10)
+                    {
+                        Console.WriteLine("Correct!");
+                        score++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incorrect!");
+                    }
+                    break;
                 }
                 else
                 {
-                    Console.WriteLine("Incorrect!");
+                    Console.WriteLine("Invalid input. Please enter a or b or c or d option!");
                 }
-                break;
             }
             Console.WriteLine();
 
@@ -468,31 +552,41 @@ namespace Quiz.Game
 
             char correctAnswer11 = 'a';
 
+            Console.WriteLine("Question 12: How do you create a variable with a floating point value in C#?");
+            Console.WriteLine("a)float f = 5.99f;");
+            Console.WriteLine("b)int f = 5.99;");
+            Console.WriteLine("c)double f = \"5.99\";");
+            Console.WriteLine("d)num f = 5.99f;");
+            Console.WriteLine();
+
             while (true)
             {
-                Console.WriteLine("Question 12: How do you create a variable with a floating point value in C#?");
-                Console.WriteLine("a)float f = 5.99f;");
-                Console.WriteLine("b)int f = 5.99;");
-                Console.WriteLine("c)double f = \"5.99\";");
-                Console.WriteLine("d)num f = 5.99f;");
-                Console.WriteLine();
+
                 Console.Write("Enter your answer: ");
-                char userAnswer11;
-                bool isCorrectAnswer11Parsing = char.TryParse(Console.ReadLine(), out userAnswer11);
+                string userInput11 = Console.ReadLine();
+                bool isCorrectAnswer11Parsing = char.TryParse(userInput11, out char userAnswer11);
 
-
-                if (userAnswer11 == correctAnswer11)
+                if (isCorrectAnswer11Parsing == true && (userAnswer11 == 'a' || userAnswer11 == 'b' || userAnswer11 == 'c' || userAnswer11 == 'd'))
                 {
-                    Console.WriteLine("Correct!");
-                    score++;
+                    if (userAnswer11 == correctAnswer11)
+                    {
+                        Console.WriteLine("Correct!");
+                        score++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incorrect!");
+                    }
+                    break;
                 }
                 else
                 {
-                    Console.WriteLine("Incorrect!");
+                    Console.WriteLine("Invalid input. Please enter a or b or c or d option!");
                 }
-                break;
+
+
             }
-             Console.WriteLine();
+            Console.WriteLine();
 
 
             /*Question 13: Value and Reference Types
@@ -507,29 +601,37 @@ namespace Quiz.Game
 
             char correctAnswer12 = 'b';
 
+            Console.WriteLine("Question 13: Which of the following is a reference type in C#?");
+            Console.WriteLine("a)int");
+            Console.WriteLine("b)string");
+            Console.WriteLine("c)bool");
+            Console.WriteLine("d)char");
+            Console.WriteLine();
+
             while (true)
             {
-                Console.WriteLine("Question 13: Which of the following is a reference type in C#?");
-                Console.WriteLine("a)int");
-                Console.WriteLine("b)string");
-                Console.WriteLine("c)bool");
-                Console.WriteLine("d)char");
-                Console.WriteLine();
+
                 Console.Write("Your answer is: ");
-                char userAnswer12;
-                bool isCorrectAnswer12Parsing = char.TryParse(Console.ReadLine(), out userAnswer12);
+                string userInput12 = Console.ReadLine();
+                bool isCorrectAnswer12Parsing = char.TryParse(userInput12, out char userAnswer12);
 
-
-                if (userAnswer12 == correctAnswer12)
+                if (isCorrectAnswer12Parsing == true && (userAnswer12 == 'a' || userAnswer12 == 'b' || userAnswer12 == 'c' || userAnswer12 == 'd'))
                 {
-                    Console.WriteLine("Correct!");
-                    score++;
+                    if (userAnswer12 == correctAnswer12)
+                    {
+                        Console.WriteLine("Correct!");
+                        score++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incorrect!");
+                    }
+                    break;
                 }
                 else
                 {
-                    Console.WriteLine("Incorrect!");
+                    Console.WriteLine("Invalid input. Please enter a or b or c or d option!");
                 }
-                break;
             }
             Console.WriteLine();
 
@@ -545,29 +647,37 @@ namespace Quiz.Game
 
             char correctAnswer13 = 'd';
 
+            Console.WriteLine("Question 14: Which is NOT a loop type in C#?");
+            Console.WriteLine("a)while");
+            Console.WriteLine("b)do-while");
+            Console.WriteLine("c)foreach");
+            Console.WriteLine("d)repeat");
+            Console.WriteLine();
+
             while (true)
             {
-                Console.WriteLine("Question 14: Which is NOT a loop type in C#?");
-                Console.WriteLine("a)while");
-                Console.WriteLine("b)do-while");
-                Console.WriteLine("c)foreach");
-                Console.WriteLine("d)repeat");
-                Console.WriteLine();
+
                 Console.Write("Enter your answer: ");
-                char userAnswer13;
-                bool isCorrectAnswer13Parsing = char.TryParse(Console.ReadLine(), out userAnswer13);
+                string userInput13 = Console.ReadLine();
+                bool isCorrectAnswer13Parsing = char.TryParse(userInput13, out char userAnswer13);
 
-
-                if (userAnswer13 == correctAnswer13)
+                if (isCorrectAnswer13Parsing == true && (userAnswer13 == 'a' || userAnswer13 == 'b' || userAnswer13 == 'c' || userAnswer13 == 'd'))
                 {
-                    Console.WriteLine("Correct!");
-                    score++;
+                    if (userAnswer13 == correctAnswer13)
+                    {
+                        Console.WriteLine("Correct!");
+                        score++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incorrect!");
+                    }
+                    break;
                 }
                 else
                 {
-                    Console.WriteLine("Incorrect!");
+                    Console.WriteLine("Invalid input. Please enter a or b or c or d option!");
                 }
-                break;
             }
             Console.WriteLine();
 
@@ -583,30 +693,37 @@ namespace Quiz.Game
             d)convert(double, x)  */
 
             char correctAnswer14 = 'a';
+            Console.WriteLine("Question 15: Which syntax is correct for casting an int to double?");
+            Console.WriteLine("a)(double)x");
+            Console.WriteLine("b)[double]x");
+            Console.WriteLine("c){double}x");
+            Console.WriteLine("d)convert(double, x)");
+            Console.WriteLine();
 
             while (true)
             {
-                Console.WriteLine("Question 15: Which syntax is correct for casting an int to double?");
-                Console.WriteLine("a)(double)x");
-                Console.WriteLine("b)[double]x");
-                Console.WriteLine("c){double}x");
-                Console.WriteLine("d)convert(double, x)");
-                Console.WriteLine();
+
                 Console.Write("Enter your answer: ");
-                char userAnswer14;
-                bool isCorrectAnswer14Parsing = char.TryParse(Console.ReadLine(), out userAnswer14);
+                string userInput14 = Console.ReadLine();
+                bool isCorrectAnswer14Parsing = char.TryParse(userInput14, out char userAnswer14);
 
-
-                if (userAnswer14 == correctAnswer14)
+                if (isCorrectAnswer14Parsing == true && (userAnswer14 == 'a' || userAnswer14 == 'b' || userAnswer14 == 'c' || userAnswer14 == 'd'))
                 {
-                    Console.WriteLine("Correct!");
-                    score++;
+                    if (userAnswer14 == correctAnswer14)
+                    {
+                        Console.WriteLine("Correct!");
+                        score++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incorrect!");
+                    }
+                    break;
                 }
                 else
                 {
-                    Console.WriteLine("Incorrect!");
+                    Console.WriteLine("Invalid input. Please enter a or b or c or d option!");
                 }
-                break;
             }
             Console.WriteLine();
 
@@ -623,36 +740,44 @@ namespace Quiz.Game
 
             char correctAnswer15 = 'a';
 
+            Console.WriteLine("Question 16: Which is the correct syntax for a ternary operator in C#?");
+            Console.WriteLine("a)x ? y : z");
+            Console.WriteLine("b)x ? y ? z");
+            Console.WriteLine("c)x : y ? z");
+            Console.WriteLine("d)x : (y) : z");
+            Console.WriteLine();
+
             while (true)
             {
-                Console.WriteLine("Question 16: Which is the correct syntax for a ternary operator in C#?");
-                Console.WriteLine("a)x ? y : z");
-                Console.WriteLine("b)x ? y ? z");
-                Console.WriteLine("c)x : y ? z");
-                Console.WriteLine("d)x : (y) : z");
-                Console.WriteLine();
+
                 Console.Write("Enter your answer: ");
-                char userAnswer15;
-                bool isCorrectAnswer15Parsing = char.TryParse(Console.ReadLine(), out userAnswer15);
+                string userInput15 = Console.ReadLine();
+                bool isCorrectAnswer15Parsing = char.TryParse(userInput15, out char userAnswer15);
 
-
-                if (userAnswer15 == correctAnswer15)
+                if (isCorrectAnswer15Parsing == true && (userAnswer15 == 'a' || userAnswer15 == 'b' || userAnswer15 == 'c' || userAnswer15 == 'd'))
                 {
-                    Console.WriteLine("Correct!");
-                    score++;
+                    if (userAnswer15 == correctAnswer15)
+                    {
+                        Console.WriteLine("Correct!");
+                        score++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Incorrect!");
+                    }
+                    break;
                 }
                 else
                 {
-                    Console.WriteLine("Incorrect!");
+                    Console.WriteLine("Invalid input. Please enter a or b or c or d option!");
                 }
-                break;
             }
             Console.WriteLine();
 
             Console.WriteLine($"Quiz Complete! You scored {score} out of 16.");
 
-            
-            
+
+
 
 
 
