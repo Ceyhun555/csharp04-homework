@@ -17,7 +17,7 @@
 
             Hello, welcome to C# programming! */
 
-            Greet();
+            MethodTasks.Greet();
 
 
             /*Task 2: Method with Parameters
@@ -263,9 +263,7 @@
             Console.WriteLine($"Result: {result}");
 
         }
-        //Task 1:
-        static void Greet() => Console.WriteLine("Hello, welcome to C# programming!");
-
+       
         //Task 2:
 
         static void PersonalizedGreet(string name) => Console.WriteLine($"Hello, {name}! Welcome to C# programmming.");

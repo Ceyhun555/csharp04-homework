@@ -39,13 +39,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Quiz.Game", "ConsoleApps\We
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Week12", "Week12", "{D2DD324F-2393-4635-8401-4FD4357DA33C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays", "ConsoleApps\Week12\Arrays\Arrays.csproj", "{3B9C7556-C18F-417F-BFBD-3AB48C96CA90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arrays", "ConsoleApps\Week12\Arrays\Arrays.csproj", "{3B9C7556-C18F-417F-BFBD-3AB48C96CA90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Method", "ConsoleApps\Week12\Method\Method.csproj", "{D0C424F3-3A45-4092-B8CD-27A970C28684}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Method", "ConsoleApps\Week12\Method\Method.csproj", "{D0C424F3-3A45-4092-B8CD-27A970C28684}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Week11", "Week11", "{BFFB1D06-07C4-4677-B12B-C848F3CD6556}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM", "ConsoleApps\Week11\ATM\ATM.csproj", "{C3C64596-315D-45F0-AB20-E33879A1AC62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATM", "ConsoleApps\Week11\ATM\ATM.csproj", "{C3C64596-315D-45F0-AB20-E33879A1AC62}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{C7107F71-6C30-49E2-91DB-8F84957314C5}"
+	ProjectSection(SolutionItems) = preProject
+		Month01.md = Month01.md
+		Month02.md = Month02.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
