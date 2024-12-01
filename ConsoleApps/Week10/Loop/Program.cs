@@ -447,7 +447,7 @@ namespace Loop
             while (true)
             {
                 Console.WriteLine("Enter a string");
-                bool isStringParsing = int.TryParse(Console.ReadLine(), );
+                bool isStringParsing = int.TryParse(Console.ReadLine(), 
 
                 if (isStringParsing == false)
                 {
