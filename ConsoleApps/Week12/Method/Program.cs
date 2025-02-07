@@ -37,7 +37,7 @@
 
             Console.Write("\nEnter your name: ");
             string name = Console.ReadLine();
-            PersonalizedGreet(name);
+            MethodTasks.PersonalizedGreet(name);
 
 
             /*Task 3: Method with Return Value
@@ -55,10 +55,10 @@
 
             The square of 4 is 16.  */
 
-            Console.Write("\nEnter a number: ");
-            int number = int.Parse(Console.ReadLine());
-            int square = CalculateSquare(number);
+            int number = ReadIntFromConsole("Enter a number: ");
+            int square = MethodTasks.CalculateSquare(number);
             Console.WriteLine($"The square of {number} is {square}");
+
 
 
             /*Task 4: Method Overloading
@@ -78,15 +78,10 @@
             Sum of two numbers: 8
             Sum of three numbers: 12  */
 
-            Console.Write("\nEnter two numbers: ");
-            string[] twoNumbers = Console.ReadLine().Split(',');
-            int sumTwo = Add(int.Parse(twoNumbers[0]), int.Parse(twoNumbers[1]));
-            Console.WriteLine($"Sum of two numbers: {sumTwo}");
-
-            Console.Write("Enter three numbers: ");
-            string[] threeNumbers = Console.ReadLine().Split(',');
-            int sumThree = Add(int.Parse(threeNumbers[0]), int.Parse(threeNumbers[1]), int.Parse(threeNumbers[2]));
-            Console.WriteLine($"Sum of three numbers: {sumThree}");
+            int sum1 = MethodTasks.Add(3, 5);
+            int sum2 = MethodTasks.Add(2, 4, 6);
+            Console.WriteLine($"Sum of 3 and 5: {sum1}");
+            Console.WriteLine($"Sum of 2, 4, and 6: {sum2}");
 
 
             /*Task 5: Passing Parameters by Value
@@ -106,11 +101,10 @@
             Modified value inside method: 20
             Value after method call: 10  */
 
-            Console.Write("\nEnter a number: ");
-            int originalValue = int.Parse(Console.ReadLine());
-            Console.WriteLine($"\nOriginal value: {originalValue}");
-            ModifyValue(originalValue);
-            Console.WriteLine($"Value after method call: {originalValue}");
+            int value = ReadIntFromConsole("Enter a number: ");
+            Console.WriteLine($"Original value: {value}");
+            MethodTasks.ModifyValue(value);
+            Console.WriteLine($"Value after method call: {value}"); ;
 
 
             /*Task 6: Passing Parameters by Reference
@@ -130,10 +124,11 @@
             Value inside method: 10
             Value after method call: 10  */
 
-            int refValue = 5;
-            Console.WriteLine($"\nValue before method call: {refValue}");
-            DoubleValue(ref refValue);
+            int refValue = ReadIntFromConsole("Enter a number: ");
+            Console.WriteLine($"Value before method call: {refValue}");
+            MethodTasks.ModifyValue(ref refValue);
             Console.WriteLine($"Value after method call: {refValue}");
+
 
             /*Task 7: Using out Parameters
             Description
@@ -152,15 +147,11 @@
             Quotient: 3
             Remainder: 1 */
 
-            Console.Write("\nEnter dividend: ");
-            int dividend = int.Parse(Console.ReadLine());
 
-            Console.Write("Enter divisor: ");
-            int divisor = int.Parse(Console.ReadLine());
-
-            CalculateQuotientAndRemainder(dividend, divisor, out int quotient, out int remainder);
-            Console.WriteLine($"Quotient: {quotient}");
-            Console.WriteLine($"Remainder: {remainder}");
+            int dividend = ReadIntFromConsole("Enter dividend: ");
+            int divisor = ReadIntFromConsole("Enter divisor: ");
+            MethodTasks.CalculateQuotientAndRemainder(dividend, divisor, out int quotient, out int remainder);
+            Console.WriteLine($"Quotient: {quotient}, Remainder: {remainder}");
 
             /*Task 8: Method with Optional Parameters
             Description
@@ -178,12 +169,12 @@
 
             Area: 25  */
 
-            Console.Write("\nEnter length: ");
-            int length = int.Parse(Console.ReadLine());
+            int length = ReadIntFromConsole("Enter length: ");
             Console.Write("Enter width (or press Enter to skip): ");
             string widthInput = Console.ReadLine();
-            int width = string.IsNullOrWhiteSpace(widthInput) ? 0 : int.Parse(widthInput);
-            Console.WriteLine($"Area: {CalculateArea(length, width)}");
+            int width = int.TryParse(widthInput, out int w) ? w : 0;
+            int area = MethodTasks.CalculateArea(length, width);
+            Console.WriteLine($"Area: {area}");
 
 
             /*Task 9: Recursion in Methods
@@ -201,9 +192,9 @@
 
             Factorial of 5 is 120 */
 
-            Console.Write("\nEnter a number to calculate its factorial: ");
-            int factNumber = int.Parse(Console.ReadLine());
-            Console.WriteLine($"Factorial of {factNumber} is {Factorial(factNumber)}");
+            int factNumber = ReadIntFromConsole("Enter a number: ");
+            int factorial = MethodTasks.CalculateFactorial(factNumber);
+            Console.WriteLine($"Factorial of {factNumber} is {factorial}");
 
             /*Task 10: Using Method to Work with Arrays
             Description
@@ -221,8 +212,33 @@
             Largest element: 9  */
 
             Console.Write("\nEnter array elements (comma-separated): ");
-            int[] array = Array.ConvertAll(Console.ReadLine().Split(','), int.Parse);
-            Console.WriteLine($"Largest element: {FindLargestElement(array)}");
+            string input = Console.ReadLine();
+
+            if (!string.IsNullOrEmpty(input))
+            {
+                string[] stringArray = input.Split(',');
+                int[] array = new int[stringArray.Length];
+
+                for (int i = 0; i < stringArray.Length; i++)
+                {
+                    if (int.TryParse(stringArray[i], out int number2))
+                    {
+                        array[i] = number2;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid number in input. Defaulting to 0.");
+                        array[i] = 0;
+                    }
+                }
+
+                int largest = MethodTasks.FindLargest(array);
+                Console.WriteLine($"Largest element: {largest}");
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Please enter a comma-separated list of numbers.");
+            }
 
             /*Task 11: Real-World Scenario - Simple Calculator
             Description
@@ -241,85 +257,47 @@
 
             Result: 2  */
 
+            
 
-            Console.Write("\nEnter first number: ");
-            double firstNumber = double.Parse(Console.ReadLine());
+            
 
-            Console.Write("Enter second number: ");
-            double secondNumber = double.Parse(Console.ReadLine());
 
-            Console.Write("Choose operation (+, -, *, /): ");
-            char operation = Console.ReadKey().KeyChar;
-            Console.WriteLine();
 
-            double result = operation switch
+
+
+
+
+
+
+
+            static int ReadIntFromConsole(string prompt)
             {
-                '+' => Add(firstNumber, secondNumber),
-                '-' => Subtract(firstNumber, secondNumber),
-                '*' => Multiply(firstNumber, secondNumber),
-                '/' => Divide(firstNumber, secondNumber),
-                _ => throw new InvalidOperationException("Invalid operation")
-            };
-            Console.WriteLine($"Result: {result}");
+                while (true)
+                {
+                    Console.Write(prompt);
 
-        }
-       
-        //Task 2:
+                    if (int.TryParse(Console.ReadLine(), out int value))
+                    {
+                        return value;
+                    }
 
-        static void PersonalizedGreet(string name) => Console.WriteLine($"Hello, {name}! Welcome to C# programmming.");
-
-        //Task 3:
-        static int CalculateSquare(int number) => number * number;
-
-        //Task 4:
-        static int Add(int a, int b) => a + b;
-        static int Add(int a, int b, int c) => a + b + c;
-
-        //Task 5:
-        static void ModifyValue(int value)
-        {
-            value *= 2;
-            Console.WriteLine($"Modified value inside method: {value}");
-        }
-
-        //Task 6:
-        static void DoubleValue(ref int value)
-        {
-            value *= 2;
-            Console.WriteLine($"Value inside method: {value}");
-        }
-
-        //Task 7:
-        static void CalculateQuotientAndRemainder(int dividend, int divisor, out int quotient, out int remainder)
-        {
-            quotient = dividend / divisor;
-            remainder = dividend % divisor;
-        }
-
-        //Task 8:
-        static int CalculateArea(int length, int width = 0) => width == 0 ? length * length : length * width;
-
-        //Task 9:
-        static int Factorial(int number) => number == 0 ? 1 : number * Factorial(number - 1);
-
-        //Task 10:
-        static int FindLargestElement(int[] array)
-        {
-            int largest = array[0];
-            foreach (int num in array)
-            {
-                if (num > largest) largest = num;
+                    Console.WriteLine("Invalid input. Please enter a valid integer.");
+                }
             }
-            return largest;
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
-
-        //Task 11:
-        static double Add(double a, double b) => a + b;
-        static double Subtract(double a, double b) => a - b;
-        static double Multiply(double a, double b) => a * b;
-        static double Divide(double a, double b) => b != 0 ? a / b : throw new DivideByZeroException("Cannot divide by zero.");
-
-
 
 
 
