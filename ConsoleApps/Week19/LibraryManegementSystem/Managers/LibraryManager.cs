@@ -176,5 +176,21 @@ namespace LibraryManegementSystem.Managers
             }
         }
 
+
+
+
+        public void UpdateItem(LibraryItem item, string title, string author, int publishYear, string additionalInfo)
+        {
+            string Title = title;
+            string Author = author;
+            int PublishYear = publishYear;
+
+            // Update type-specific information (genre, issue number, journal name)
+
+
+
+
+        }
+
     }
 }
