@@ -20,5 +20,10 @@ namespace LibraryManegementSystem.Models
             base.DisplayInfo();
             Console.WriteLine($"JournalName: {JournalName}");
         }
+
+        public void UpdateJournalName(string newJournalName)
+        {
+            JournalName = newJournalName;
+        }
     }
 }

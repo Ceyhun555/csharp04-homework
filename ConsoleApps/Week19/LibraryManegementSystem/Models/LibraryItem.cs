@@ -24,5 +24,12 @@ namespace LibraryManegementSystem.Models
         {
             Console.WriteLine($"Title: {Title}, Author: {Author}, PublishYear: {PublishYear}");
         }
+
+        public void UpdateDetails(string newTitle, string newAuthor, int newPublishYear)
+        {
+            Title = newTitle;
+            Author = newAuthor;
+            PublishYear = newPublishYear;
+        }
     }
 }

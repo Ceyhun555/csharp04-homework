@@ -179,17 +179,64 @@ namespace LibraryManegementSystem.Managers
 
 
 
-        public void UpdateItem(LibraryItem item, string title, string author, int publishYear, string additionalInfo)
+        public void UpdateItem(int index, string newTitle, string newAuthor, int newPublishYear, string newAdditionalInfo)
         {
-            string Title = title;
-            string Author = author;
-            int PublishYear = publishYear;
+            if(index< 0 || index >= _itemCount)
+            {
+                Console.WriteLine("Invalid item index.");
 
-            // Update type-specific information (genre, issue number, journal name)
+            }
+
+            if (string.IsNullOrEmpty(newTitle) ||
+                string.IsNullOrEmpty(newAuthor))
+            {
+                Console.WriteLine("Title and author cannot be empty.");
+                
+            }
+            if (newPublishYear < 1000 || newPublishYear > DateTime.Now.Year)
+            {
+                Console.WriteLine($"Publish year must be between 1000 and {DateTime.Now.Year}.");
+                
+            }
 
 
+            LibraryItem foundedLibraryItem = _libraryItems[index];
+            foundedLibraryItem.UpdateDetails(newTitle, newAuthor, newPublishYear);
+            
+            switch(foundedLibraryItem) 
+            {
+                case Book book:
+                    if (string.IsNullOrWhiteSpace(newAdditionalInfo))
+                    {
+                        Console.WriteLine("Genre is not be emtpy.");
+                        return;
+                    }
+                    book.UpdateGenre(newAdditionalInfo);
+                    break;
+                case Magazine magazine:
+                    if (!int.TryParse(newAdditionalInfo, out int issueNumber) || issueNumber <= 0)
+                    {
+                        Console.WriteLine("Invalid issue number.");
+                        return;
+                    }
+                    magazine.UpdateIssueNumber(issueNumber);
+                    break;
+                case Article article:
+                    if (string.IsNullOrWhiteSpace(newAdditionalInfo))
+                    {
+                        Console.WriteLine("Journal name cannot be empty.");
+                        return;
+                    }
+                    article.UpdateJournalName(newAdditionalInfo);
+                    break;
+                default:
+                    Console.WriteLine("Unknown item");
+                    break;
 
 
+            }
+
+            Console.WriteLine("Update successfully.");
         }
 
     }

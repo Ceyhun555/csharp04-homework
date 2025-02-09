@@ -20,5 +20,10 @@ namespace LibraryManegementSystem.Models
             base.DisplayInfo();
             Console.WriteLine($"Genre: {Genre}");
         }
+
+        public void UpdateGenre(string newGenre)
+        {
+            Genre = newGenre;
+        }
     }
 }

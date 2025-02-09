@@ -8,34 +8,6 @@ namespace LibraryManegementSystem
     {
         static void Main(string[] args)
         {
-            //AuthenticationManager authManager = new AuthenticationManager();
-
-            //authManager.Login();
-
-            //LibraryManager libraryManager = new LibraryManager();
-
-            //LibraryItem bookLibraryItem = libraryManager.CreateNewItem(Enums.ItemType.Book, "Icimizdeki Seytan", "Sabahaddin Ali", 2019, "Turk Edebiyyat Klassikleri");
-            //LibraryItem bookLibraryItem2 = libraryManager.CreateNewItem(Enums.ItemType.Book, "Qəzəb Salxımları", "Con Steynbek", 1939, "Azərbaycan Ədəbiyyatı");
-            //LibraryItem bookLibraryItem3 = libraryManager.CreateNewItem(Enums.ItemType.Book, "Səfillər", "Viktor Hüqo", 1862, "Fransız Romanı");
-            //LibraryItem bookLibraryItem4 = libraryManager.CreateNewItem(Enums.ItemType.Book, "Siçanlar və Adamlar", "Con Steynbek", 1890, "Dünya Povesti");
-            //LibraryItem magazineLibraryItem = libraryManager.CreateNewItem(Enums.ItemType.Magazine, "Tech Innovators Monthly", "John Matthews", 2023, "15");
-            //LibraryItem magazineLibraryItem1 = libraryManager.CreateNewItem(Enums.ItemType.Magazine, "World Travel Journal", "Emily Parker", 2024, "8");
-            //LibraryItem magazineLibraryItem2 = libraryManager.CreateNewItem(Enums.ItemType.Magazine, "Culinary Creations", "Mark Stevens", 2022, "30");
-            //LibraryItem articleLibraryItem = libraryManager.CreateNewItem(Enums.ItemType.Article, "The Future of Artificial Intelligence in Healthcare", "Dr. Lisa Hamilton", 2023, " Journal of Medical Innovations");
-            //LibraryItem articleLibraryItem1 = libraryManager.CreateNewItem(Enums.ItemType.Article, "Sustainable Practices in Urban Agriculture", " Dr. James Roberts", 2021, "Environmental Sustainability Review");
-            //LibraryItem articleLibraryItem2 = libraryManager.CreateNewItem(Enums.ItemType.Article, "Exploring Quantum Computing's Potential", "Dr. Rachel Adams", 2022, " Journal of Advanced Technology");
-            //libraryManager.AddItem(bookLibraryItem);
-            //libraryManager.AddItem(bookLibraryItem2);
-            //libraryManager.AddItem(bookLibraryItem3);
-            //libraryManager.AddItem(bookLibraryItem4);
-            //libraryManager.AddItem(magazineLibraryItem);
-            //libraryManager.AddItem(magazineLibraryItem1);
-            //libraryManager.AddItem(magazineLibraryItem2);
-            //libraryManager.AddItem(articleLibraryItem);
-            //libraryManager.AddItem(articleLibraryItem1);
-            //libraryManager.AddItem(articleLibraryItem2);
-
-
 
             /*
              * Step 1: Initialize Managers
@@ -129,6 +101,7 @@ namespace LibraryManegementSystem
 
         private static void UpdateItem(LibraryManager libraryManager)
         {
+            libraryManager.DisplayAllItemInfo();
             Console.Write("\nEnter the number of the item to update (or cancel): ");
 
             if (!int.TryParse(Console.ReadLine(), out int choice) || choice < 1)
@@ -143,174 +116,162 @@ namespace LibraryManegementSystem
                 return;
             }
 
-            // Get the item to update 
-            var itemToUpdate = libraryManager.(choice - 1);
+            int itemIndex = choice - 1;
 
-            if (itemToUpdate == null)
-            {
-                Console.WriteLine("Item not found.");
-                return;
-            }
 
             // Now, prompt for updated information
             Console.Write("Enter new title: ");
             string newTitle = Console.ReadLine() ?? "";
-            if (string.IsNullOrWhiteSpace(newTitle))
-            {
-                newTitle = itemToUpdate.Title;
-            }
+            
 
             Console.Write("Enter new author: ");
             string newAuthor = Console.ReadLine() ?? "";
-            if (string.IsNullOrWhiteSpace(newAuthor))
-            {
-                newAuthor = itemToUpdate.Author;
-            }
+            
 
             Console.Write("Enter new publish year: ");
             string yearInput = Console.ReadLine();
-            int newPublishYear = itemToUpdate.PublishYear;
-            if (int.TryParse(yearInput, out int parsedYear))
+            
+            if (!int.TryParse(yearInput, out int newPublishYear))
             {
-                newPublishYear = parsedYear;
+                Console.WriteLine("Invalid publish year.");
             }
 
-            // Update the item with new data
-            
+            Console.WriteLine("Enter new additional info: ");
+            string newAdditionalInfo = Console.ReadLine() ?? "";
 
-            
         }
 
-    }
 
-    private static void DeleteItem(LibraryManager libraryManager)
-    {
-        //Step 1: Display current items
-        libraryManager.DisplayAllItemInfo();
 
-        //Step 2: Get items to delete
-        Console.Write("\nEnter the number of the item to delete (or cancel): ");
-
-        if (!int.TryParse(Console.ReadLine(), out int choice) && choice < 0)
+        private static void DeleteItem(LibraryManager libraryManager)
         {
-            Console.WriteLine("Invalid input.");
-            return;
+            //Step 1: Display current items
+            libraryManager.DisplayAllItemInfo();
+
+            //Step 2: Get items to delete
+            Console.Write("\nEnter the number of the item to delete (or cancel): ");
+
+            if (!int.TryParse(Console.ReadLine(), out int choice) && choice < 0)
+            {
+                Console.WriteLine("Invalid input.");
+                return;
+            }
+
+            //Step 3: Hnadle cancellation
+            if (choice == 0)
+            {
+                Console.WriteLine("Deletion cancelled.");
+                return;
+            }
+
+            //Step 4: Delete the item 
+            libraryManager.DeleteItem(choice - 1);
+
         }
 
-        //Step 3: Hnadle cancellation
-        if (choice == 0)
+        private static void SearchItems(LibraryManager libraryManager)
         {
-            Console.WriteLine("Deletion cancelled.");
-            return;
+            Console.WriteLine("\nEnter search term (title or author): ");
+            string searchTerm = Console.ReadLine() ?? "";
+
+            LibraryItem[] searchResult = libraryManager.SearchItems(searchTerm);
+
+            if (searchResult.Length == 0)
+            {
+                Console.WriteLine("No items found matching your search.");
+                return;
+            }
+
+            Console.WriteLine($"\nFound {searchResult.Length} items: ");
+
+            foreach (var libraryItem in searchResult)
+            {
+                libraryItem.DisplayInfo();
+            }
         }
 
-        //Step 4: Delete the item 
-        libraryManager.DeleteItem(choice - 1);
-
-    }
-
-    private static void SearchItems(LibraryManager libraryManager)
-    {
-        Console.WriteLine("\nEnter search term (title or author): ");
-        string searchTerm = Console.ReadLine() ?? "";
-
-        LibraryItem[] searchResult = libraryManager.SearchItems(searchTerm);
-
-        if (searchResult.Length == 0)
+        private static void AddNewItem(LibraryManager libraryManager)
         {
-            Console.WriteLine("No items found matching your search.");
-            return;
+            // Step 1: Get item type
+            Console.WriteLine("\n New Item");
+            Console.WriteLine("1. Book");
+            Console.WriteLine("2. Magazine");
+            Console.WriteLine("3. Article");
+            Console.Write("\nEnter item type (1-3): ");
+
+            if (!int.TryParse(Console.ReadLine(), out int choice) && choice < 1 || choice > 3)
+            {
+                Console.WriteLine("Invalid item type. Please enter a number between 1 and 3.");
+                return;
+            }
+
+            ItemType type = (ItemType)choice;
+
+            //Step 2: Get common information
+            Console.Write("Enter title: ");
+            string title = Console.ReadLine() ?? "";
+
+            Console.Write("Enter author: ");
+            string author = Console.ReadLine() ?? "";
+
+            Console.Write("Enter publish year: ");
+            if (!int.TryParse(Console.ReadLine(), out int publishYear) && choice == 0)
+            {
+                Console.WriteLine("Invalid publish year.");
+                return;
+            }
+
+
+            // Step 3: Get type-specific information
+            string additionalInformation = GetAddItemInfotmation(type);
+
+
+            //Step 4: Create and the item
+            var item = libraryManager.CreateNewItem(
+                type: type,
+                title: title,
+                author: author,
+                publishYear: publishYear,
+                additionalInfo: additionalInformation
+                );
+
+            if (item != null)
+            {
+                libraryManager.AddItem(item);
+            }
+
         }
 
-        Console.WriteLine($"\nFound {searchResult.Length} items: ");
-
-        foreach (var libraryItem in searchResult)
+        private static string GetAddItemInfotmation(ItemType type)
         {
-            libraryItem.DisplayInfo();
+            switch (type)
+            {
+                case ItemType.Book:
+                    Console.Write("Enter genre: ");
+                    break;
+                case ItemType.Magazine:
+                    Console.Write("Enter issue number: ");
+                    break;
+                case ItemType.Article:
+                    Console.Write("Enter journal name: ");
+                    break;
+
+            }
+
+            return Console.ReadLine() ?? "";
         }
-    }
 
-    private static void AddNewItem(LibraryManager libraryManager)
-    {
-        // Step 1: Get item type
-        Console.WriteLine("\n New Item");
-        Console.WriteLine("1. Book");
-        Console.WriteLine("2. Magazine");
-        Console.WriteLine("3. Article");
-        Console.Write("\nEnter item type (1-3): ");
-
-        if (!int.TryParse(Console.ReadLine(), out int choice) && choice < 1 || choice > 3)
+        private static void DisplayMenuOptions()
         {
-            Console.WriteLine("Invalid item type. Please enter a number between 1 and 3.");
-            return;
+            Console.WriteLine("\nLibrary Management Sytem Menu:");
+            Console.WriteLine("1. Add new item");
+            Console.WriteLine("2. List all items");
+            Console.WriteLine("3. Search items");
+            Console.WriteLine("4. Delete an item");
+            Console.WriteLine("5. Update items");
+            Console.WriteLine("6. Logout and Exit");
+            Console.Write("\nEnter your choice (1-6): ");
         }
-
-        ItemType type = (ItemType)choice;
-
-        //Step 2: Get common information
-        Console.Write("Enter title: ");
-        string title = Console.ReadLine() ?? "";
-
-        Console.Write("Enter author: ");
-        string author = Console.ReadLine() ?? "";
-
-        Console.Write("Enter publish year: ");
-        if (!int.TryParse(Console.ReadLine(), out int publishYear) && choice == 0)
-        {
-            Console.WriteLine("Invalid publish year.");
-            return;
-        }
-
-
-        // Step 3: Get type-specific information
-        string additionalInformation = GetAddItemInfotmation(type);
-
-
-        //Step 4: Create and the item
-        var item = libraryManager.CreateNewItem(
-            type: type,
-            title: title,
-            author: author,
-            publishYear: publishYear,
-            additionalInfo: additionalInformation
-            );
-
-        if (item != null)
-        {
-            libraryManager.AddItem(item);
-        }
-
-    }
-
-    private static string GetAddItemInfotmation(ItemType type)
-    {
-        switch (type)
-        {
-            case ItemType.Book:
-                Console.Write("Enter genre: ");
-                break;
-            case ItemType.Magazine:
-                Console.Write("Enter issue number: ");
-                break;
-            case ItemType.Article:
-                Console.Write("Enter journal name: ");
-                break;
-
-        }
-
-        return Console.ReadLine() ?? "";
-    }
-
-    private static void DisplayMenuOptions()
-    {
-        Console.WriteLine("\nLibrary Management Sytem Menu:");
-        Console.WriteLine("1. Add new item");
-        Console.WriteLine("2. List all items");
-        Console.WriteLine("3. Search items");
-        Console.WriteLine("4. Delete an item");
-        Console.WriteLine("5. Update items");
-        Console.WriteLine("5. Logout and Exit");
-        Console.Write("\nEnter your choice (1-5): ");
     }
 }
 

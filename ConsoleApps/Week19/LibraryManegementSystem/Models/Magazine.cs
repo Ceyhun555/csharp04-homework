@@ -20,5 +20,10 @@ namespace LibraryManegementSystem.Models
             base.DisplayInfo();
             Console.WriteLine($"IssueNumber: {IssueNumber}");
         }
+
+        public void UpdateIssueNumber(int newIssueNumber)
+        {
+            IssueNumber = newIssueNumber;
+        }
     }
 }
