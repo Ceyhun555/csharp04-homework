@@ -242,6 +242,11 @@ namespace Array_MethodTasks
             Console.WriteLine($"Sum: {sumSwap}");
         }
 
+        private static object?[] FilterEvenNumbers(int[] randomNumbers)
+        {
+            throw new NotImplementedException();
+        }
+
 
 
         // Task 1
