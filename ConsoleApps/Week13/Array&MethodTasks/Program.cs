@@ -22,7 +22,7 @@ namespace Array_MethodTasks
             Input Array:
             { 23, 12, 45, 36, 19, 8, 50, 17}
                     Output:
-                        Even Numbers: 12, 36, 8, 50 */ 
+                        Even Numbers: 12, 36, 8, 50 */
 
 
             Console.WriteLine("Task 1: Filter Even Numbers");
@@ -30,7 +30,7 @@ namespace Array_MethodTasks
             Console.WriteLine("Input Array: " + string.Join(", ", randomNumbers));
             var evenNumbers = FilterEvenNumbers(randomNumbers);
             Console.WriteLine("Even Numbers: " + string.Join(", ", evenNumbers));
-            
+
 
 
             /*Task 2: Sort Fruit Names Alphabetically
@@ -250,6 +250,114 @@ namespace Array_MethodTasks
 
 
         // Task 1
+        //static int[] GenerateRandomNumbers(int count, int min, int max)
+        //{
+        //    Random random = new Random();
+        //    int[] numbers = new int[count];
+        //    for (int i = 0; i < count; i++)
+        //    {
+        //        numbers[i] = random.Next(min, max + 1);
+        //    }
+        //    return numbers;
+        //}
+
+        
+
+        // Task 2
+        //static void SortFruits(string[] fruits)
+        //{
+        //    Array.Sort(fruits);
+        //    foreach (var fruit in fruits)
+        //    {
+        //        Console.WriteLine(fruit);
+        //    }
+        //}
+
+
+
+        // Task 3
+        //static void PrintBoard(char[,] board)
+        //{
+        //    for (int i = 0; i < board.GetLength(0); i++)
+        //    {
+        //        for (int j = 0; j < board.GetLength(1); j++)
+        //        {
+        //            Console.Write(board[i, j]);
+        //            if (j < board.GetLength(1) - 1) Console.Write(" | ");
+        //        }
+        //        Console.WriteLine();
+        //    }
+        //}
+
+
+
+        // Task 4
+        //static int CalculateRectangleArea(int length, int width = 5)
+        //{
+        //    return length * width;
+        //}
+
+
+
+        // Task 5
+        //static (int sum, double average) CalculateSumAndAverage(int[] numbers)
+        //{
+        //    int sum = 0;
+        //    foreach (var number in numbers)
+        //    {
+        //        sum += number;
+        //    }
+        //    double average = (double)sum / numbers.Length;
+        //    return (sum, average);
+        //}
+
+
+
+        //// Task 6
+        //static int FindMax(int[] numbers)
+        //{
+        //    int max = numbers[0];
+        //    foreach (var number in numbers)
+        //    {
+        //        max = Math.Max(max, number);
+        //    }
+        //    return max;
+        //}
+
+        // Task 7
+        //static void Display(int value)
+        //{
+        //    Console.WriteLine("Number: " + value);
+        //}
+        //static void Display(string value)
+        //{
+        //    Console.WriteLine("Message: " + value);
+        //}
+        //static void Display(double value)
+        //{
+        //    Console.WriteLine("Decimal Value: " + value);
+        //}
+
+        // Task 8
+        //static int CalculateVolume(int length, int width, int height)
+        //{
+        //    return length * width * height;
+        //}
+
+        // Task 9
+        //static void SwapNumbers(ref int a, ref int b, out int sum)
+        //{
+        //    int temp = a;
+        //    a = b;
+        //    b = temp;
+        //    sum = a + b;
+        //}
+
+
+
+
+
+        //Taks 1:
         static int[] GenerateRandomNumbers(int count, int min, int max)
         {
             Random random = new Random();
@@ -261,7 +369,6 @@ namespace Array_MethodTasks
             return numbers;
         }
 
-        
 
         // Task 2
         static void SortFruits(string[] fruits)
@@ -272,6 +379,8 @@ namespace Array_MethodTasks
                 Console.WriteLine(fruit);
             }
         }
+
+
 
         // Task 3
         static void PrintBoard(char[,] board)
@@ -287,11 +396,14 @@ namespace Array_MethodTasks
             }
         }
 
+
         // Task 4
         static int CalculateRectangleArea(int length, int width = 5)
         {
             return length * width;
         }
+
+
 
         // Task 5
         static (int sum, double average) CalculateSumAndAverage(int[] numbers)
@@ -316,6 +428,7 @@ namespace Array_MethodTasks
             return max;
         }
 
+
         // Task 7
         static void Display(int value)
         {
@@ -330,13 +443,15 @@ namespace Array_MethodTasks
             Console.WriteLine("Decimal Value: " + value);
         }
 
+
         // Task 8
         static int CalculateVolume(int length, int width, int height)
         {
             return length * width * height;
         }
 
-        // Task 9
+
+
         static void SwapNumbers(ref int a, ref int b, out int sum)
         {
             int temp = a;
@@ -344,6 +459,8 @@ namespace Array_MethodTasks
             b = temp;
             sum = a + b;
         }
+
+
     }
 }
 
