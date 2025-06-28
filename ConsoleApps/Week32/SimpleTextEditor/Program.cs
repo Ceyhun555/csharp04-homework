@@ -1,13 +1,17 @@
 ﻿
-using System.ComponentModel.Design.Serialization;
+using System;
+using UndoTextEditor.Services;
 
-namespace SimpleTextEditor
+namespace UndoTextEditor
 {
-    internal class Program
+    class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            while (true)
+            TextEditorService service = new TextEditorService();
+            int choice;
+
+            do
             {
                 Console.Clear();
                 Console.WriteLine("=== Simple Text Editor ===");
@@ -17,65 +21,45 @@ namespace SimpleTextEditor
                 Console.WriteLine("4. Clear all");
                 Console.WriteLine("5. Save and exit");
                 Console.Write("Enter your choice: ");
-                string choice = Console.ReadLine();
 
+                string input = Console.ReadLine();
+                if (!int.TryParse(input, out choice))
+                {
+                    Console.WriteLine("Invalid input.");
+                    Console.ReadKey();
+                    continue;
+                }
+
+                Console.WriteLine();
                 switch (choice)
                 {
-                    case "1":
-                        AddNewLine();
+                    case 1:
+                        service.TypeNewText();
                         break;
-                    case "2":
-                        UndoLastLine();
+                    case 2:
+                        service.UndoLastEntry();
                         break;
-                    case "3":
-                        ViewText();
+                    case 3:
+                        service.ViewText();
                         break;
-                    case "4":
-                        ClearText();
+                    case 4:
+                        service.ClearAll();
                         break;
-                    case "5":
-                        SaveSession();
-                        Console.WriteLine("Changes saved. Exiting.");
-                        return;
+                    case 5:
+                        service.SaveAndExit();
+                        break;
                     default:
-                        Console.WriteLine("Invalid choice. Try again.");
+                        Console.WriteLine(" Invalid choice.");
                         break;
                 }
 
+                if (choice != 5)
+                {
+                    Console.WriteLine("\nPress any key to continue...");
+                    Console.ReadKey();
+                }
 
-            }
-        }
-
-        private static void AddNewLine()
-        {
-            Console.Write("\nEnter new line: ");
-            string newLine = Console.ReadLine().Trim();
-
-            if (string.IsNullOrEmpty(newLine)) 
-            {
-                Console.WriteLine("Cannot add empty text.");
-                return;
-            }
-        }
-
-        private static void UndoLastLine()
-        {
-            
-        }
-
-        private static void ViewText()
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void ClearText()
-        {
-            throw new NotImplementedException();
-        }
-
-        private static void SaveSession()
-        {
-            throw new NotImplementedException();
+            } while (choice != 5);
         }
     }
 }
