@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PhoneBookManagementSystem.Constants
 {
-    internal class ApplicationConstants
+    public class ApplicationConstants
     {
     }
 }
