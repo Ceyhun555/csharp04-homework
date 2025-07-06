@@ -181,6 +181,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintJobManagementSystem", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBookManagementSystem", "ConsoleApps\Week35\PhoneBookManagementSystem\PhoneBookManagementSystem.csproj", "{3DB93F6E-AD2A-4ACA-B4DE-FB1A53503422}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Week36", "Week36", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegularExpressions", "ConsoleApps\Week36\RegularExpressions\RegularExpressions.csproj", "{09B12798-518D-4360-B8E2-EBBB5E15047C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -435,6 +439,10 @@ Global
 		{3DB93F6E-AD2A-4ACA-B4DE-FB1A53503422}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DB93F6E-AD2A-4ACA-B4DE-FB1A53503422}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DB93F6E-AD2A-4ACA-B4DE-FB1A53503422}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09B12798-518D-4360-B8E2-EBBB5E15047C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09B12798-518D-4360-B8E2-EBBB5E15047C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09B12798-518D-4360-B8E2-EBBB5E15047C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09B12798-518D-4360-B8E2-EBBB5E15047C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -525,6 +533,8 @@ Global
 		{8358BF01-FBBD-45BC-A13D-76A220C721EA} = {D046A0EA-4B7A-4AE8-BB15-AB5244D629B3}
 		{93E14915-2A06-4C24-8AC2-883A0B76E46E} = {D046A0EA-4B7A-4AE8-BB15-AB5244D629B3}
 		{3DB93F6E-AD2A-4ACA-B4DE-FB1A53503422} = {D046A0EA-4B7A-4AE8-BB15-AB5244D629B3}
+		{02EA681E-C7D8-13C7-8484-4AC65E1B71E8} = {219F0EF2-26B5-42B8-8B87-9DBDBF2E5E12}
+		{09B12798-518D-4360-B8E2-EBBB5E15047C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {71961D5B-E66A-401B-8F49-DB893FFD4DE5}
