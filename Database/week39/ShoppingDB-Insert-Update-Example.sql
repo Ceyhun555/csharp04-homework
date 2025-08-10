@@ -153,3 +153,12 @@ SELECT * FROM OrderDetails;
 UPDATE Products
 SET Stock = Stock - 2
 WHERE ProductID IN (3,2,4);
+
+
+INSERT INTO Customers 
+(FirstName, LastName, Email,Phone,Address)
+VALUES 
+(N'Murad',N'Salmanov',N'murad.23@gmail.com',N'+994552487642',N'Sumqayit'),
+(N'Aynur',N'Seyidli',N'aynur.@gmail.com',N'+994705674692',N'Quba'),
+(N'lalə',N'Əhmədli',N'Lalə.24@gmail.com',N'+994512909801',N'Baki'),
+(N'Lamiyə',N'Məmmədova',N'lamiyə.m@gmail.com',N'+994778943567',N'Qebele');
