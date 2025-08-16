@@ -31,9 +31,7 @@ HAVING COUNT(*) > 2;
 
 
 
---WHERE ve HAVING bir yerde  
---Execution sirasina gore oncelikle where row-level filtering isliyecek , 
---sonra GROUP BY agregation isliyecek sonra ise qruplanmis data uzerinde HAVING isliyecek.
+--WHERE ve HAVING bir yerde 
 SELECT Country, COUNT(*) AS ActiveCustomerCount
 FROM Customers 
 WHERE IsActive = 1
