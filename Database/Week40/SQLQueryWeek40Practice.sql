@@ -530,4 +530,101 @@ FROM [Order]
 GROUP BY CustomerID
 ORDER BY AverageSpending DESC;
 
-ALTER TABLE 
+
+--cedvelde olmayan status stununun movcud cedvele elave olunmasi.
+--cedvelimizde data varsa yeni elave olunan sutun mutleq sekilde 
+--nullable olmalidir cunki null olmasaydi cedvel bunu required (mecburi) column olaraq basa dusur.
+
+ALTER TABLE [Order] 
+ADD Status varchar(50) null;
+
+
+--sehv burda olmayan sutuna gore sql xetasi alacagiq
+--Msg 4901, Level 16, State 1, Line 542
+--ALTER TABLE only allows columns to be added that can contain nulls, or have a DEFAULT definition specified,
+--or the column being added is an identity or timestamp column, or alternatively if none of the previous conditions are satisfied the table must be empty to allow addition of this column.
+--Column 'Status2' cannot be added to non-empty table 'Order' because it does not satisfy these conditions.
+
+ALTER TABLE [Order] 
+ADD Status2 varchar(50) not null;
+
+
+--olmayan sutunu elave ederken ya sutun nullable olmalidi yadaki ona default deyer set olunmalidi.
+ALTER TABLE [Order] 
+ADD Status2 varchar(50) DEFAULT 'Pending';
+
+
+SELECT * FROM [Order];
+SELECT * FROM OrderDetail;
+
+INSERT INTO [Order] (CustomerID, OrderDate, TotalAmount) 
+VALUES
+(1, CURRENT_TIMESTAMP, 1799.99);
+
+
+--Cedvelden sutunun silinmesi. eger onun her hansisa constrainti varsa constraintde siloinmelidir.
+ALTER TABLE [Order]
+DROP COLUMN Status2;
+
+
+
+--ALTER TABLE tablename ALTER COLUMN columnname nvarchar(5);
+
+--cedvelde olan sutunun data tipinin ve ya constraintinin deyisdirilmesi.
+
+ALTER TABLE [Order] 
+ALTER COLUMN Status varchar(30);
+
+
+--cedvelde movcud olan status sutunu ucun default constraintin elave olunmasi.
+ALTER TABLE [Order]
+ADD CONSTRAINT DF_Status DEFAULT  'Pending' FOR Status;
+
+
+
+-- Step 3: Find orders older than 30 days
+--DATEDIFF(datepart, start_date, end_date)  datepart gun, ay, il ,saat ucun muqayise ucun istifade olunur. 
+--datediff umumiyyetle iki tarix arasindaki ferqi verir.
+--DATEADD(interval, number, date) 
+--DATEADD specific tarixin uzerine gun, ay ,il, saat elave ve ya cixmag ucun istifade olunur.
+
+SELECT 
+    ID,
+    CustomerID,
+    OrderDate,
+    DATEDIFF(day,OrderDate, GETDATE()) AS DaysOld
+FROM [Order]
+WHERE OrderDate < DATEADD (day, -16, GETDATE());
+
+
+SELECT 
+*
+FROM [Order] 
+WHERE [Status] = 'Pending'; 
+
+SELECT *FROM OrderDetail;
+
+
+INSERT INTO OrderDetail (OrderID, ProductID, Quantity, UnitPrice)
+VALUES 
+(25,3,3,1200),
+(25,4,4,1300),
+(25,7,7,1100)
+
+--pending statusununda olan ordere gore orderdetaillerin silinmesi.
+--asagida istifade olunnan subquerry pending statusunundaki orderi verir.
+
+SELECT 
+ID
+FROM [Order] 
+WHERE [Status] = 'Pending'; 
+
+DELETE FROM OrderDetail
+WHERE OrderID IN (
+SELECT 
+ID
+FROM [Order] 
+WHERE [Status] = 'Pending');
+`
+
+
