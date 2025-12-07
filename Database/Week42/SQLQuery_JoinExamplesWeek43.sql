@@ -13,6 +13,22 @@ GROUP BY c.FirstName, c.LastName, c.Email
 ORDER BY TotalOrders DESC;
 
 
+SELECT 
+    c.FirstName + ' ' + c.LastName AS CustomerName,
+    c.Email,
+    COUNT(o.ID) AS TotalOrders,
+    SUM(o.TotalAmount) AS TotalAmount
+    FROM Customer c
+    LEFT JOIN [Order] o ON c.ID = o.CustomerID
+    GROUP BY c.FirstName, c.LastName, c.Email
+    ORDER BY TotalOrders DESC;
+
+
+SELECT *FROM Customer
+
+SELECT * FROM [Order]
+
+
 --Exercise 2: Product Performance Analysis
 SELECT 
     p.ProductName,
@@ -99,3 +115,63 @@ ORDER BY TotalOrders DESC;
 
 
 
+
+--FOREIGN KEYLERIN ELAVE EDILMESI.
+
+ALTER TABLE [Order]
+ADD Constraint FK_Order_Customer
+FOREIGN KEY(CustomerID)
+REFERENCES Customer (ID)
+
+
+SELECT * FROM [Order]
+
+SELECT * FROM Customer
+
+UPDATE [Order]
+SET CustomerID = 1
+WHERE CustomerID IN (4,6,7,8) 
+
+UPDATE [Order]
+SET ShipperID = 1
+WHERE ShipperID IS NULL
+SELECT * FROM [Order] 
+WHERE ShipperID IS NULL
+
+ALTER TABLE [Order]
+ADD Constraint FK_Order_Shipper
+FOREIGN KEY(ShipperID)
+REFERENCES Shipper (ID)
+
+ALTER TABLE [Order]
+ALTER COLUMN ShipperID INT NOT NULL
+
+
+SELECT * FROM Shipper
+
+
+ALTER TABLE OrderDetail
+ADD Constraint FK_OrderDetail_Product
+FOREIGN KEY(ProductID)
+REFERENCES [Product] (ID)
+
+ALTER TABLE OrderDetail
+ALTER COLUMN ProductID INT NOT NULL
+
+
+SELECT DISTINCT
+ProductID 
+FROM OrderDetail 
+WHERE NOT EXISTS (
+SELECT 1
+FROM [Product]
+WHERE Product.ID = OrderDetail.ProductID
+);
+
+
+UPDATE OrderDetail
+SET ProductID = 1
+WHERE ProductID = 6
+
+
+--OrderDetail cedvelinde orderID gore foreign key elave edilmesi.

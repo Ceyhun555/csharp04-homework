@@ -21,7 +21,8 @@ SELECT
 	[Order].TotalAmount,
 	[Order].Status
 FROM Customer
-INNER JOIN [Order] ON Customer.ID = [Order].CustomerID
+INNER JOIN [Order] 
+ON Customer.ID = [Order].CustomerID
 
 
 
@@ -30,7 +31,8 @@ SELECT
 	Customer.*,
 	[Order].*
 FROM Customer
-INNER JOIN [Order] ON Customer.ID = [Order].CustomerID
+INNER JOIN [Order] 
+ON Customer.ID = [Order].CustomerID
 
 
 
@@ -38,4 +40,60 @@ INNER JOIN [Order] ON Customer.ID = [Order].CustomerID
 SELECT 
 	*
 FROM Customer
-INNER JOIN [Order] ON Customer.ID = [Order].CustomerID
+INNER JOIN [Order] 
+ON Customer.ID = [Order].CustomerID
+
+
+
+SELECT 
+	*
+FROM Customer
+ JOIN [Order] 
+ON Customer.ID = [Order].CustomerID
+
+
+--JOIN Three Tables
+
+CREATE TABLE Shipper(
+	ID INT PRIMARY KEY,
+	Name NVARCHAR(50)
+	)
+
+
+INSERT INTO Shipper(ID, Name)VALUES
+(1,'Expargo'),
+(2,'Starex');
+
+
+ALTER TABLE [Order] 
+ADD ShipperID INT;
+
+
+SELECT * FROM [Order];
+
+
+UPDATE [Order] 
+SET ShipperID = 2
+WHERE ID > 15;
+
+
+
+
+
+SELECT 
+	Customer.FirstName,
+	Customer.LastName,
+	[Order].ID,
+	[Order].OrderDate,
+	[Order].TotalAmount,
+	[Order].Status,
+	Shipper.Name
+FROM Customer
+INNER JOIN [Order] 
+ON Customer.ID = [Order].CustomerID
+INNER JOIN Shipper
+ON [Order].ShipperID = Shipper.ID
+
+
+
+

@@ -1,0 +1,51 @@
+CREATE DATABASE LibraryManagementSystemDB;
+GO
+
+USE LibraryManagementSystemDB;
+GO
+
+CREATE TABLE Books
+(
+	Id INT IDENTITY(1,1) PRIMARY KEY,
+	Title NVARCHAR (100) NOT NULL,
+	Description NVARCHAR (200) NOT NULL,
+	Author NVARCHAR (100) NOT NULL,
+	IsAvialable BIT NOT NULL DEFAULT(1),
+	Year INT NOT NULL
+
+
+)
+
+GO
+
+
+CREATE TABLE Members 
+(
+	Id INT IDENTITY(1,1) PRIMARY KEY,
+	Name NVARCHAR (50) NOT NULL,
+	SurName NVARCHAR (50) NOT NULL,
+	IdentityNumber NVARCHAR(10) NOT NULL,
+	PhoneNumber  NVARCHAR(20) NOT NULL
+)
+
+GO
+
+
+CREATE TABLE BookCheckOutRecords
+(
+	Id INT IDENTITY(1,1) PRIMARY KEY,
+	BookId INT NOT NULL,
+	MemberId INT NOT NULL,
+	CheckOutDate DATETIME NOT NULL DEFAULT(GETDATE()),
+	ReturnDate DATETIME NULL,
+
+	CONSTRAINT FK_BookCheckOutRecords_Books
+	FOREIGN KEY(BookId) REFERENCES Books(Id),
+
+	CONSTRAINT FK_BookCheckOutRecords_Members
+	FOREIGN KEY(MemberId) REFERENCES Members(Id)
+
+
+)
+
+GO

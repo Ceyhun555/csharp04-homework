@@ -1,0 +1,7 @@
+SELECT TOP (1000) [ID]
+      ,[CustomerID]
+      ,[OrderDate]
+      ,[TotalAmount]
+      ,[Status]
+      ,[ShipperID]
+  FROM [ShoppingDB].[dbo].[Order]
